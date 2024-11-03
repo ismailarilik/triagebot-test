@@ -1,1 +1,23 @@
-
+# FIXME: Patch triagebot to support `notify-zulip.<label>` getting mapped to an array of actions.
+#        At the moment, the beta-nominated+T-rustdoc action fully occupies the beta-nominated slot
+#        preventing others from adding more beta-nominated actions.
+[notify-zulip."beta-nominated"]
+required_labels = ["T-rustdoc"]
+zulip_stream = 266220 # #t-rustdoc
+topic = "beta-nominated: #{number}"
+# Zulip polls may not be preceded by any other text and pings & short links inside
+# the title of a poll don't get recognized. Therefore we need to send two messages.
+message_on_add = [
+    """\
+@*T-rustdoc* PR #{number} "{title}" has been nominated for beta backport.
+""",
+    """\
+/poll Approve beta backport of #{number}?
+approve
+decline
+don't know
+""",
+]
+message_on_remove = "PR #{number}'s beta-nomination has been removed."
+message_on_close = "PR #{number} has been closed. Thanks for participating!"
+message_on_reopen = "PR #{number} has been reopened. Pinging @*T-rustdoc*."
