@@ -1,7 +1,7 @@
 # FIXME: Patch triagebot to support `notify-zulip.<label>` getting mapped to an array of actions.
 #        At the moment, the beta-nominated+T-rustdoc action fully occupies the beta-nominated slot
 #        preventing others from adding more beta-nominated actions.
-[notify-zulip."beta-nominated"]
+[[notify-zulip."beta-nominated"]]
 required_labels = ["T-rustdoc"]
 zulip_stream = 266220 # #t-rustdoc
 topic = "beta-nominated: #{number}"
