@@ -21,4 +21,3 @@ don't know
 message_on_remove = "PR #{number}'s beta-nomination has been removed."
 message_on_close = "PR #{number} has been closed. Thanks for participating!"
 message_on_reopen = "PR #{number} has been reopened. Pinging @*T-rustdoc*."
-
