@@ -3,7 +3,7 @@
 #        preventing others from adding more beta-nominated actions.
 [notify-zulip."beta-nominated"]
 required_labels = ["T-rustdoc"]
-zulip_stream = 266220 # #t-rustdoc
+zulip_stream = 499869 # #t-rustdoc
 topic = "beta-nominated: #{number}"
 message_on_add = "PR #{number}'s beta-nomination has been added. T-rustdoc"
 message_on_remove = "PR #{number}'s beta-nomination has been removed. T-rustdoc"
@@ -15,7 +15,7 @@ message_on_reopen = "PR #{number} has been reopened. Pinging @*T-rustdoc*. T-rus
 
 [notify-zulip."beta-nominated".compiler]
 required_labels = ["T-compiler"]
-zulip_stream = 266221
+zulip_stream = 499870
 topic = "beta-nominated: #{number}"
 message_on_add = "PR #{number}'s beta-nomination has been added. T-compiler"
 message_on_remove = "PR #{number}'s beta-nomination has been removed. T-compiler"
